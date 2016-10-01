@@ -1,0 +1,221 @@
+@import "https://fonts.googleapis.com/css?family=Roboto";
+@import "https://fonts.googleapis.com/css?family=Lato";
+@import "https://fonts.googleapis.com/css?family=Montserrat";
+@import "https://fonts.googleapis.com/css?family=Open+Sans";
+@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro";
+/*
+		* THESE ARE THE GLOBAL STYLES FOR THE BUTTONS.
+		*
+		* 		__SOME__ of these properties should be overriden to suit the projects needs.
+		*/
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 1.125em;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1;
+}
+
+#body-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#body-wrapper #demo-wrapper {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+@media (max-height: 500px) {
+  #body-wrapper #demo-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+#body-wrapper #demo-wrapper .demo-block {
+  margin: 3%;
+}
+#body-wrapper #demo-wrapper .demo-block p {
+  font-size: 0.61803em;
+  color: darkgray;
+}
+#body-wrapper .floating-title {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.61803em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  top: 45%;
+  right: 5rem;
+  padding: 1rem;
+  border-radius: .4em;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.35);
+}
+#body-wrapper .floating-title p {
+  font-weight: 700;
+}
+@media (max-height: 500px) {
+  #body-wrapper .floating-title {
+    top: 5%;
+    font-size: 0.38197em;
+    padding: 0.5rem 1rem;
+  }
+}
+
+button {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5;
+  text-decoration: none;
+  background: #536dfe;
+  border: #536dfe solid 1px;
+  border-radius: 0.25rem;
+  letter-spacing: 0.25px;
+  padding: 0.75rem 2.5rem;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #fff;
+}
+button:hover, button:focus {
+  border: #98a7fe solid 1px;
+  color: white;
+  background: #98a7fe;
+}
+button:active {
+  border: #324198 solid 1px;
+  color: #999999;
+  background: #324198;
+}
+
+a.button {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5;
+  text-decoration: none;
+  background: #536dfe;
+  border: #536dfe solid 1px;
+  border-radius: 0.25rem;
+  letter-spacing: 0.25px;
+  padding: 0.75rem 2.5rem;
+  letter-spacing: 0.25px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #fff;
+}
+a.button:hover, a.button:focus {
+  border: #98a7fe solid 1px;
+  color: white;
+  background: #98a7fe;
+}
+a.button:active {
+  border: #324198 solid 1px;
+  color: #999999;
+  background: #324198;
+}
+
+button.outline-button,
+button.outline,
+.button.button-outline {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5;
+  text-decoration: none;
+  letter-spacing: 0.25px;
+  background: transparent;
+  border: #536dfe solid 1px;
+  border-radius: 0.25rem;
+  padding: 0.75rem 2.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #536dfe;
+}
+button.outline-button:hover, button.outline-button:focus,
+button.outline:hover,
+button.outline:focus,
+.button.button-outline:hover,
+.button.button-outline:focus {
+  border: #98a7fe solid 1px;
+  color: #98a7fe;
+}
+button.outline-button:active,
+button.outline:active,
+.button.button-outline:active {
+  border: #324198 solid 1px;
+  color: #324198;
+}
+
+.outline {
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.5;
+  text-decoration: none;
+  letter-spacing: 0.25px;
+  background: transparent;
+  border: #536dfe solid 1px;
+  border-radius: 0.25rem;
+  padding: 0.75rem 2.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #536dfe;
+}
+.outline:hover, .outline:focus {
+  border: #98a7fe solid 1px;
+  color: #98a7fe;
+}
+.outline:active {
+  border: #324198 solid 1px;
+  color: #324198;
+}
