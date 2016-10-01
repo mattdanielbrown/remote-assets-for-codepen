@@ -1,0 +1,300 @@
+@import "bourbon";
+@import "modular-scale";
+@import "breakpoint";
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+@import 'https://fonts.googleapis.com/css?family=Lato';
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro';
+///////////////////////////////////////////////////////////////////////////////////////////
+$roboto: 'Roboto';
+$lato: 'Lato';
+$montserrat: 'Montserrat';
+$openSans: 'Open Sans';
+$sourceSansPro: 'Source Sans Pro';
+//_________________________________________
+$mainFont: $sourceSansPro;
+//-----------------------------------------
+$fallbackFont: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$primaryFont: $mainFont,
+$fallbackFont;
+$tooShort: 500px max-height;
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// VARIABLES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+/*
+		* THESE ARE THE GLOBAL STYLES FOR THE BUTTONS.
+		*
+		* 		__SOME__ of these properties should be overriden to suit the projects needs.
+		*/
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::;
+//  the global button style (and it's default)
+$button-style__solid: solid;
+$button-style__outline: outline;
+$button-style__default: $button-style__solid; // override if needed
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//  this will either be the button's fill/background & border color
+//  or (if it's an outline button) it's border & text color
+$button-color: #536dfe; // override if needed
+$button-color__hover: tint($button-color, 40%);
+$button-color__active: shade($button-color, 40%);
+$button-color__focus: $button-color__hover;
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$button-border__color: $button-color;
+$button-border__width: 1px; // override if needed
+$button-border__radius: 0.25rem; // override if needed
+$button-border: $button-color solid $button-border__width; // * DONT OVERRIDE
+$button-border__hover: $button-color__hover solid $button-border__width; // * DONT OVERRIDE
+$button-border__active: $button-color__active solid $button-border__width; // * DONT OVERRIDE
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$button-text__size: ms(0); // override if needed
+$button-text__weight: 300; // override if needed
+$button-text__line-height: 1.5;
+$button-text__vertical-padding: 0.75rem; // override if needed
+$button-text__horizontal-padding: 2.5rem; // override if needed
+$button-text__letter-spacing: 0.25px; // override if needed
+// $button-text__letter-spacing:  normal;
+$button_solid-text__color: #fff;
+$button_solid-text__color__hover: tint($button_solid-text__color, 40%);
+$button_solid-text__color__active: shade($button_solid-text__color, 40%);
+$button_outline-text__color: $button-color;
+$button_outline-text__color__hover: $button-color__hover;
+$button_outline-text__color__active: $button-color__active;
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$button-transition_duration: 0.2s; // override if needed
+$button-transition_property: all;
+$button-transition: $button-transition_property $button-transition_duration;
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+$button-display: inline-block; // override if neeed
+//		... specifically, 'inline-block' / 'block' will allow buttons to be horizontally grouped easier.
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+//  THE BUTTON MIXINS
+@mixin clearElement {
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	@include noPadding;
+	text-decoration: none;
+	letter-spacing: normal;
+	font-size: ms(0);
+}
+
+@mixin buttonSolid() {
+	display: $button-display;
+	cursor: pointer;
+	font-weight: $button-text__weight;
+	font-size: $button-text__size;
+	line-height: $button-text__line-height;
+	text-decoration: none;
+	background: $button-color;
+	border: $button-border;
+	border-radius: $button-border__radius;
+	letter-spacing: $button-text__letter-spacing;
+	padding: $button-text__vertical-padding $button-text__horizontal-padding;
+	letter-spacing: $button-text__letter-spacing;
+	transition: $button-transition;
+	color: $button_solid-text__color;
+	// width: 100%;
+	// max-width: 4rem;
+	&:hover,
+	&:focus {
+		border: $button-border__hover;
+		color: $button_solid-text__color__hover;
+		background: $button-color__hover;
+	}
+	&:active {
+		border: $button-border__active;
+		color: $button_solid-text__color__active;
+		background: $button-color__active;
+	}
+}
+
+@mixin buttonOutline() {
+	display: $button-display;
+	cursor: pointer;
+	font-weight: $button-text__weight;
+	font-size: $button-text__size;
+	line-height: $button-text__line-height;
+	text-decoration: none;
+	letter-spacing: $button-text__letter-spacing;
+	background: transparent;
+	border: $button-border;
+	border-radius: $button-border__radius;
+	padding: $button-text__vertical-padding $button-text__horizontal-padding;
+	transition: $button-transition;
+	color: $button_outline-text__color;
+	&:hover,
+	&:focus {
+		border: $button-border__hover;
+		color: $button_outline-text__color__hover;
+	}
+	&:active {
+		border: $button-border__active;
+		color: $button_outline-text__color__active;
+	}
+}
+
+//::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// MIXINS
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+@mixin devOutline {
+	outline: red thin solid;
+}
+
+@mixin flexVerticalCenter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+@mixin flexHorizontalCenter {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+@mixin flexVerticalSpace {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: space-around;
+}
+
+@mixin flexHorizontalSpace {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-content: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+@mixin fullscreen {
+	width: 100vw;
+	min-height: 100vh;
+}
+
+@mixin noMargin {
+	margin: 0;
+}
+
+@mixin noPadding {
+	padding: 0;
+}
+
+@mixin noMarginNoPadding {
+	@include noMargin;
+	@include noPadding;
+}
+
+@mixin autoCenterMargins {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// STYLES
+// ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+* {
+	// @include devOutline;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-size: 1.125em;
+	// font-size: 1em;
+	font-family: $primaryFont;
+	line-height: 1;
+}
+
+#body-wrapper {
+	@include fullscreen;
+	@include flexVerticalCenter;
+	#demo-wrapper {
+		@include autoCenterMargins;
+		// @include flexHorizontalSpace;
+		// @include flexHorizontalCenter;
+		width: 90%;
+		// max-width: 100%;
+		@include breakpoint($tooShort) {
+			@include flexHorizontalSpace;
+		}
+		.demo-block {
+			// margin: 1em 0;
+			margin: 3%;
+			// padding: 2em 0;
+			// text-align: center;
+			// display: block;
+			p {
+				// margin-bottom: 1rem;
+				font-size: ms(-1);
+				color: darkgray;
+			}
+		}
+	}
+	.floating-title {
+		background: rgba(#000, 0.6);
+		color: white;
+		font-size: ms(-1);
+		@include autoCenterMargins;
+		position: fixed;
+		top: 45%;
+		right: 5rem;
+		padding: 1rem;
+		border-radius: .4em;
+		box-shadow: 1px 1px 20px rgba(#000, 0.35);
+		p {
+			font-weight: 700;
+		}
+		@include breakpoint($tooShort) {
+			top: 5%;
+			font-size: ms(-2);
+			padding: 0.5rem 1rem;
+		}
+	}
+}
+
+//////////////////////////////////////////////////////////////
+button {
+	// 	@include clearElement;
+	// 	cursor: pointer;
+	// 	transition: all .25s;
+	// 	border-radius: .3rem;
+	// 	background: $button-color;
+	// 	border:  $button-color 1px solid;
+	// 	color: white;
+	// 	padding: 1rem 2.25rem;
+	// 	font-weight: 300;
+	// 	letter-spacing: .25px;
+	@include buttonSolid();
+	// display: inline-block;
+	// @include noMargin;
+}
+
+a.button {
+	@include buttonSolid();
+	// @include noMargin;
+	// display: block;
+	// display: inline-block;
+}
+
+button.outline-button,
+button.outline,
+.button.button-outline {
+	@include buttonOutline;
+}
+
+.outline {
+	@include buttonOutline;
+}
