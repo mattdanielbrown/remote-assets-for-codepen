@@ -1,0 +1,145 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* --------------------------------
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.6rem;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #021725;
+  background-color: #fff; }
+
+a {
+  color: #e36767;
+  text-decoration: none; }
+
+img, embed, object, video, svg {
+  max-width: 100%; }
+
+input, textarea {
+  font-family: inherit;
+  font-size: 1.6rem; }
+
+/* --------------------------------
+
+Patterns - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto; }
+  .cd-container::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+/* --------------------------------
+
+Main Components
+
+-------------------------------- */
+.cd-intro {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+  .cd-intro h1 {
+    max-width: 1170px;
+    color: #e36767;
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center; }
+  @media only screen and (min-width: 768px) {
+    .cd-intro h1 {
+      font-size: 30px;
+      font-size: 1.875rem; } }
+  @media only screen and (min-width: 1170px) {
+    .cd-intro {
+      height: 700px; } }
+
+.cd-main-content p {
+  line-height: 1.6;
+  margin: 2em 0; }
+@media only screen and (min-width: 1170px) {
+  .cd-main-content p {
+    font-size: 20px;
+    font-size: 1.25rem; } }
+
+.cd-intro {
+  margin-top: 24rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.cd-main-content {
+  margin-top: 6rem; }
+
+h1 {
+  font-size: 3rem !important;
+  margin-bottom: 2rem; }
+
+h2 {
+  font-size: 2rem !important; }
+
+h2, h3, h4, h5, h6 {
+  margin-bottom: 2rem !important; }
+
+h4 {
+  color: darkgray; }
+
+/*# sourceMappingURL=style.css.map */

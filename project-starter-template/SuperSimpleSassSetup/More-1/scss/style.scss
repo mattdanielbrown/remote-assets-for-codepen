@@ -1,0 +1,31 @@
+// Note: we use Autoprefixer to add vendor prefixes to our CSS -> https://github.com/postcss/autoprefixer
+
+@import "bourbon/bourbon";
+@import "partials/vendor/vendor";
+@import 'partials/base/base'; // colors, fonts etc... , custom mixins, responsive grid and media queries
+@import "partials/defaults";
+
+
+// DELETE EVERYTHING BELOW HERE ----------------------------------------------------------------------------------------
+.cd-intro {
+    margin-top: 24rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.cd-main-content {
+    margin-top: 6rem;
+}
+h1 {
+    font-size: 3rem !important;
+    margin-bottom: 2rem;
+}
+h2 {
+    font-size: 2rem!important;
+}
+h2, h3, h4, h5, h6 {
+    margin-bottom: 2rem !important;
+}
+h4 {
+    color: darkgray;
+}
