@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Profile Photo Copy 2</title>
+    <defs>
+        <linearGradient x1="0%" y1="22.68431%" x2="100%" y2="77.31569%" id="linearGradient-1">
+            <stop stop-color="#FF9F0A" offset="0%"></stop>
+            <stop stop-color="#FF375F" offset="100%"></stop>
+        </linearGradient>
+        <path d="M237.264706,305 L126.617647,305 C89.3330921,305 59,274.666908 59,237.382353 C59,200.097798 89.3330921,169.764706 126.617647,169.764706 C130.039346,169.764706 133.479056,170.073841 137.375,170.533088 C150.245404,126.432121 190.579454,96 237.264706,96 C294.887358,96 341.764706,142.877348 341.764706,200.5 C341.764706,258.122652 294.887358,305 237.264706,305 Z" id="path-2"></path>
+        <filter x="-13.6%" y="-17.5%" width="127.2%" height="136.8%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="9" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="2" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.462745098   0 0 0 0 0.164705882  0 0 0 0.321398328 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Profile-Photo-Copy-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M123.06649,-4.97203348e-15 L276.93351,4.97203348e-15 C319.72641,-2.88889463e-15 335.244149,4.45562934 350.888594,12.8223698 C366.533038,21.1891102 378.81089,33.4669618 387.17763,49.1114062 C395.544371,64.7558507 400,80.2735901 400,123.06649 L400,276.93351 C400,319.72641 395.544371,335.244149 387.17763,350.888594 C378.81089,366.533038 366.533038,378.81089 350.888594,387.17763 C335.244149,395.544371 319.72641,400 276.93351,400 L123.06649,400 C80.2735901,400 64.7558507,395.544371 49.1114062,387.17763 C33.4669618,378.81089 21.1891102,366.533038 12.8223698,350.888594 C4.45562934,335.244149 1.92592976e-15,319.72641 -3.31468898e-15,276.93351 L3.31468898e-15,123.06649 C-1.92592976e-15,80.2735901 4.45562934,64.7558507 12.8223698,49.1114062 C21.1891102,33.4669618 33.4669618,21.1891102 49.1114062,12.8223698 C64.7558507,4.45562934 80.2735901,2.88889463e-15 123.06649,-4.97203348e-15 Z" id="Rectangle" fill="#FFFFFF"></path>
+        <g id="Path" fill-rule="nonzero">
+            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+            <use fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+        </g>
+        <text id="m" font-family="ProductSans-Bold, Product Sans" font-size="132" font-weight="bold" fill="#FFFFFF">
+            <tspan x="152.42" y="259">m</tspan>
+        </text>
+    </g>
+</svg>
